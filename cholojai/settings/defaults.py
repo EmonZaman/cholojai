@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # 3rd party apps
     "debug_toolbar",
     'rest_framework',
+
     # my apps
     'accounts',
     'core',
@@ -172,9 +173,10 @@ LOGGING = {
 # DRF configs
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.BasicAuthentication',
+       'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-        # 'rest_framework.authentication.TokenAuthentication',
+         'rest_framework.authentication.TokenAuthentication',
+       # 'knox.auth.TokenAuthentication',
     ],
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
